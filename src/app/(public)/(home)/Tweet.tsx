@@ -1,3 +1,4 @@
+import { PAGES } from '@/config/pages.config'
 import type { ITweet } from '@/shared/types/tweet.interface'
 import Link from 'next/link'
 import React from 'react'
@@ -10,7 +11,7 @@ export default function Tweet({tweet}: Props) {
   return (
     <div>
      <p>{tweet.text}</p>
-     <Link href={`/u/${tweet.author}`}>@{tweet.author}</Link>
+     <Link href={PAGES.PROFILE(tweet.author)}>@{tweet.author}</Link>
     </div>
   )
 }
