@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import xLogo from '@public/x-logo.svg?react'
-type Props = {};
+import Menu from "@/components/Menu";
 
-export default function Header({}: Props) {
+export default function Header() {
   return (
     <div className="border-b flex bg-black">
       <Link href="/" className="flex items-center gap-3">
@@ -18,10 +17,8 @@ export default function Header({}: Props) {
         />
       </Link>
 
-      <nav className="flex gap-6 text-sm text-white/80 ml-auto">
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-      </nav>
+      <Menu />
+      
     </div>
   );
 }

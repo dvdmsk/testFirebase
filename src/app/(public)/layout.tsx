@@ -1,14 +1,14 @@
-import Header from '@/components/Header'
-import React, { type PropsWithChildren } from 'react'
+import Header from "@/components/Header";
+import React, { type PropsWithChildren } from "react";
 import "../globals.css";
 
-type Props = {}
-
-export default function Layout({children}:  PropsWithChildren<unknown>) {
+export default function Layout({ children }: PropsWithChildren<unknown>) {
   return (
-    <div>
+    <div className="min-h-screen">
       <Header />
-      {children}
+      <div className="w-full max-w-xl flex justify-center px-4 py-8">
+        {children}
+      </div>
     </div>
-  )
+  );
 }
