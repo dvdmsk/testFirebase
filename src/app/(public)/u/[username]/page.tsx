@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import React from "react";
+import Profile from "./Profile";
 
-function page() {
-  return <div>page</div>;
+export const metadata: Metadata = {
+    title: "Profile",
 }
 
-export default page;
+
+function ProfilePage() {
+  return <Profile />;
+}
+
+export default ProfilePage;
